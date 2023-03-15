@@ -1,0 +1,23 @@
+@import "../variables.module.scss";
+
+.toastMessage {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 1000;
+  background: #ffffff;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 24px 24px 46px 24px;
+  div:first-child {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  div:nth-child(2) {
+    font-size: 15px;
+    line-height: 143%;
+  }
+}

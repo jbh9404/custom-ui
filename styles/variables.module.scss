@@ -1,0 +1,12 @@
+$gray-a: #b4b4b4;
+$gray-b: #9c9c9c;
+$fire-gradient: linear-gradient(130.64deg, #ff533b 26.21%, #ffcc48 117.68%);
+$fire-empty-gradient: linear-gradient(#fff, #fff) padding-box,
+  linear-gradient(130.64deg, #ff533b 100%, #ffcc48 100%);
+$pink-gradient: linear-gradient(
+  to right,
+  rgb(242, 112, 156),
+  rgb(255, 148, 114)
+);
+$pink-empty-gradient: linear-gradient(#fff, #fff) padding-box,
+  linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));

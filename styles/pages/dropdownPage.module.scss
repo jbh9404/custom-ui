@@ -1,0 +1,45 @@
+@import "../variables.module.scss";
+
+.feedInput {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 352px;
+  height: 46px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background: white;
+  font-size: 14px;
+  color: black;
+  padding-left: 12px;
+  padding-right: 15px;
+}
+.clickedInput {
+  border: 1px solid skyblue;
+}
+.feedInput option {
+  background-color: green;
+}
+.feedSelectOption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 47px;
+  width: 100%;
+  background: green;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 10px 20px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 8px 0 5px 0;
+}
+.feedSelectOptionEach {
+  width: 100%;
+  padding: 12px 0 11px 12px;
+  box-sizing: border-box;
+}
+.feedSelectOptionEach:hover {
+  background: $gray-a;
+  font-weight: 700;
+}
