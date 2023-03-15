@@ -9,6 +9,7 @@ import ModalPage from "./components/ModalPage";
 import IconPage from "./components/IconPage";
 import DropdownPage from "./components/DropdownPage";
 import ToastPage from "./components/ToastPage";
+import ColorPage from "./components/ColorPage";
 
 const { TabPane } = Tabs;
 
@@ -35,6 +36,9 @@ function App() {
         </TabPane>
         <TabPane tab="Toast" key={6}>
           <ToastPage />
+        </TabPane>
+        <TabPane tab="Color" key={7}>
+          <ColorPage />
         </TabPane>
       </Tabs>
       <Modal />
