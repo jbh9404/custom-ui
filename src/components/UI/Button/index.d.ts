@@ -1,10 +1,11 @@
-export type kind = "primary" | "secondary" | "ghost" | "disabled";
+import { ButtonHTMLAttributes, ReactNode, CSSProperties } from "react";
 
-export interface ButtonProps {
-  kind: kind;
-  width: string;
-  children: any;
-  style?: any;
-  onClick?: () => void;
-  type?: any;
+export type kind = "primary" | "secondary" | "disabled" | "ghost";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  width?: string;
+  kind?: kind;
+  style?: CSSProperties;
+  type?: "button" | "submit" | "reset";
 }

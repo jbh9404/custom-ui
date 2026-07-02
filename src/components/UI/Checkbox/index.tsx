@@ -1,7 +1,11 @@
 import React from "react";
 import styles from "../../../../styles/ui/checkbox.module.scss";
 
-const CustomCheckbox = ({ color }: any) => {
+interface CheckboxProps {
+  color?: string;
+}
+
+const CustomCheckbox = ({ color }: CheckboxProps) => {
   return (
     <label className={styles.pickCheckbox}>
       <input type="checkbox" />

@@ -1,18 +1,31 @@
-import create from "zustand";
+import { create } from "zustand";
+import { ReactNode } from "react";
 
-const useToast = create((set, get) => ({
+interface ToastState {
+  showToast: boolean;
+  toastContent: ReactNode | null;
+  timeoutId: ReturnType<typeof setTimeout> | null;
+  handleToast: (toastContent: ReactNode, timer?: number) => void;
+}
+
+export const useToast = create<ToastState>((set, get) => ({
   showToast: false,
   toastContent: null,
-  handleToast: (toastContent: any, timer = 1700) => {
-    let timeout;
+  timeoutId: null,
+  handleToast: (toastContent, timer = 1700) => {
+    const currentTimeout = get().timeoutId;
+    if (currentTimeout) {
+      clearTimeout(currentTimeout);
+    }
+
+    const newTimeoutId = setTimeout(() => {
+      set({ showToast: false, timeoutId: null });
+    }, timer);
+
     set({
       showToast: true,
-      toastContent: toastContent ? toastContent : null,
+      toastContent: toastContent || null,
+      timeoutId: newTimeoutId,
     });
-    timeout = setTimeout(() => {
-      set({ showToast: false });
-    }, timer);
   },
 }));
-
-export { useToast };

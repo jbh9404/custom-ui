@@ -3,7 +3,7 @@ import { useModal } from "../../libs/hooks/useModal";
 import SampleOne from "../Modals/SampleOne";
 
 const ModalPage = () => {
-  const handleModal = useModal((state: any) => state.handleModal);
+  const handleModal = useModal((state) => state.handleModal);
 
   return (
     <div>

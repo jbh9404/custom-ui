@@ -4,7 +4,7 @@ import SampleOne from "../Modals/SampleOne";
 import ToastMessage from "../Toast/ToastMessage";
 
 const ToastPage = () => {
-  const handleToast = useToast((state: any) => state.handleToast);
+  const handleToast = useToast((state) => state.handleToast);
 
   return (
     <div>

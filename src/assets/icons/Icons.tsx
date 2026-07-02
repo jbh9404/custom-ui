@@ -6,7 +6,7 @@ import { ReactComponent as Google } from "./google.svg";
 import { ReactComponent as Trash } from "./trash.svg";
 import { ReactComponent as Arrow } from "./arrow.svg";
 
-export const BookmarkIcon = (props: any) => {
+export const BookmarkIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, color, ...rest } = props;
   return (
     <Bookmark
@@ -19,7 +19,7 @@ export const BookmarkIcon = (props: any) => {
   );
 };
 
-export const BookmarkOnIcon = (props: any) => {
+export const BookmarkOnIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, color, ...rest } = props;
   return (
     <BookmarkOn
@@ -32,28 +32,28 @@ export const BookmarkOnIcon = (props: any) => {
   );
 };
 
-export const FacebookIcon = (props: any) => {
+export const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, ...rest } = props;
   return (
     <Facebook width={width} height={height} className={className} {...rest} />
   );
 };
 
-export const LinkedinIcon = (props: any) => {
+export const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, ...rest } = props;
   return (
     <Linkedin width={width} height={height} className={className} {...rest} />
   );
 };
 
-export const GoogleIcon = (props: any) => {
+export const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, ...rest } = props;
   return (
     <Google width={width} height={height} className={className} {...rest} />
   );
 };
 
-export const TrashIcon = (props: any) => {
+export const TrashIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, color, ...rest } = props;
   return (
     <Trash
@@ -66,7 +66,7 @@ export const TrashIcon = (props: any) => {
   );
 };
 
-export const ArrowIcon = (props: any) => {
+export const ArrowIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const { className, width, height, color, ...rest } = props;
   return (
     <Arrow
