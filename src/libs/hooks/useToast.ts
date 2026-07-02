@@ -1,15 +1,21 @@
 import create from "zustand";
+import { ReactNode } from "react";
 
-const useToast = create((set, get) => ({
+interface ToastState {
+  showToast: boolean;
+  toastContent: ReactNode | null;
+  handleToast: (toastContent: ReactNode, timer?: number) => void;
+}
+
+const useToast = create<ToastState>((set) => ({
   showToast: false,
   toastContent: null,
-  handleToast: (toastContent: any, timer = 1700) => {
-    let timeout;
+  handleToast: (toastContent, timer = 1700) => {
     set({
       showToast: true,
-      toastContent: toastContent ? toastContent : null,
+      toastContent: toastContent || null,
     });
-    timeout = setTimeout(() => {
+    setTimeout(() => {
       set({ showToast: false });
     }, timer);
   },

@@ -1,9 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ReactNode } from "react";
 import styles from "../../../../styles/modals/modalType.module.scss";
-import { useModal } from "../../../libs/hooks/useModal";
+import { useModal } from "@/libs/hooks/useModal";
 
-const ModalTypeA = ({ width, children, trigger, setTrigger }: any) => {
-  const handleModal = useModal((state: any) => state.handleModal);
+interface ModalTypeAProps {
+  width?: string;
+  children: ReactNode;
+  trigger: boolean;
+  setTrigger: (trigger: boolean) => void;
+}
+
+const ModalTypeA = ({ width, children, trigger, setTrigger }: ModalTypeAProps) => {
+  const handleModal = useModal((state) => state.handleModal);
 
   const [on, setOn] = useState(false);
 
@@ -15,7 +22,7 @@ const ModalTypeA = ({ width, children, trigger, setTrigger }: any) => {
         handleModal();
       }, 500);
     }
-  }, [trigger]);
+  }, [trigger, setTrigger, handleModal]);
 
   useEffect(() => {
     setOn(true);

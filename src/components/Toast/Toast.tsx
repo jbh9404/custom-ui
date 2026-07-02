@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import ReactDOM from "react-dom";
-import shallow from "zustand/shallow";
-import { useToast } from "../../libs/hooks/useToast";
+import { shallow } from "zustand/shallow";
+import { useToast } from "@/libs/hooks/useToast";
 
 const selector = (state: any) => ({
   toastContent: state.toastContent,
@@ -10,10 +10,10 @@ const selector = (state: any) => ({
 });
 
 const Toast = () => {
-  const portalDiv = document.querySelector("#modal-root")!;
-  const { toastContent, showToast, handleToast } = useToast(selector, shallow);
+  const portalDiv = document.querySelector("#modal-root");
+  const { toastContent, showToast } = useToast(selector, shallow);
 
-  if (showToast) {
+  if (showToast && portalDiv) {
     return ReactDOM.createPortal(<>{toastContent}</>, portalDiv);
   } else return null;
 };

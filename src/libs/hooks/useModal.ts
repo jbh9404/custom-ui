@@ -1,12 +1,19 @@
 import create from "zustand";
+import { ReactNode } from "react";
 
-const useModal = create((set) => ({
+interface ModalState {
+  showModal: boolean;
+  modalContent: ReactNode | null;
+  handleModal: (modalContent?: ReactNode | null) => void;
+}
+
+const useModal = create<ModalState>((set) => ({
   showModal: false,
-  modalContent: false,
-  handleModal: (modalContent: any) => {
+  modalContent: null,
+  handleModal: (modalContent) => {
     set({
-      showModal: !modalContent || !modalContent.props ? false : true,
-      modalContent: modalContent ? modalContent : null,
+      showModal: !!modalContent,
+      modalContent: modalContent || null,
     });
   },
 }));
