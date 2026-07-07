@@ -2,22 +2,51 @@
 
 .toastMessage {
   position: fixed;
+  bottom: 24px;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  z-index: 1000;
-  background: #ffffff;
-  border: 1px solid gray;
+  transform: translateX(-50%);
+  min-width: 320px;
+  max-width: 400px;
+  z-index: 9999;
+  
+  background-color: #27272a; /* Clean dark gray */
+  color: #ffffff;
+  
   border-radius: 8px;
-  padding: 24px 24px 46px 24px;
-  div:first-child {
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  .title {
     font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 4px;
-  }
-  div:nth-child(2) {
     font-size: 15px;
-    line-height: 143%;
+    color: #fafafa;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+  
+  .desc {
+    font-size: 14px;
+    color: #a1a1aa; /* Muted gray for description */
+    line-height: 1.5;
   }
 }
+
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+

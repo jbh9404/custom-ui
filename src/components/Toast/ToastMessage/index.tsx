@@ -5,8 +5,8 @@ import { ToastMessageProps } from "./index.d";
 const ToastMessage = ({ message, exp }: ToastMessageProps) => {
   return (
     <div className={styles.toastMessage}>
-      <div>{message}</div>
-      <div>{exp}</div>
+      {message && <div className={styles.title}>{message}</div>}
+      {exp && <div className={styles.desc}>{exp}</div>}
     </div>
   );
 };

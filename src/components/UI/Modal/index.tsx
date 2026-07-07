@@ -44,7 +44,7 @@ const ModalTypeA = ({ width, children, trigger, setTrigger }: ModalTypeAProps) =
         style={{
           width: width,
           opacity: on ? 1 : 0,
-          transform: on ? "translateY(0)" : "translateY(300px)",
+          transform: on ? "scale(1) translateY(0)" : "scale(0.95) translateY(20px)",
         }}
       >
         {children}
