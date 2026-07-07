@@ -1,0 +1,108 @@
+.drawerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.drawerOverlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawerContent {
+  position: fixed;
+  background-color: white;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placements */
+.drawerContent.left {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  transform: translateX(-100%);
+}
+
+.drawerContent.left.open {
+  transform: translateX(0);
+}
+
+.drawerContent.right {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  transform: translateX(100%);
+}
+
+.drawerContent.right.open {
+  transform: translateX(0);
+}
+
+.drawerContent.top {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 300px;
+  transform: translateY(-100%);
+}
+
+.drawerContent.top.open {
+  transform: translateY(0);
+}
+
+.drawerContent.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 300px;
+  transform: translateY(100%);
+}
+
+.drawerContent.bottom.open {
+  transform: translateY(0);
+}
+
+/* Header & Body */
+.drawerHeader {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #00000073;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #000000e0;
+  }
+}
+
+.drawerBody {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+  font-family: sans-serif;
+}

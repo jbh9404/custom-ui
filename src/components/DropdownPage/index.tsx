@@ -29,6 +29,7 @@ const DropdownPage = () => {
 
   return (
     <div>
+      <h3 style={{ marginBottom: '16px', fontFamily: 'sans-serif', fontSize: '24px' }}>Dropdown</h3>
       <ClickAwayHandler handler={() => setIsSelectOn(false)}>
         <div
           className={classNames(

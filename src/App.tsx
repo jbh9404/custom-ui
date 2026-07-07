@@ -10,6 +10,9 @@ import IconPage from "@/components/IconPage";
 import DropdownPage from "@/components/DropdownPage";
 import ToastPage from "@/components/ToastPage";
 import ColorPage from "@/components/ColorPage";
+import FormPage from "@/components/FormPage";
+import FeedbackPage from "@/components/FeedbackPage";
+import NavigationPage from "@/components/NavigationPage";
 
 const tabItems: TabsProps["items"] = [
   { key: "1", label: "Button", children: <ButtonPage /> },
@@ -19,6 +22,9 @@ const tabItems: TabsProps["items"] = [
   { key: "5", label: "Dropdown", children: <DropdownPage /> },
   { key: "6", label: "Toast", children: <ToastPage /> },
   { key: "7", label: "Color", children: <ColorPage /> },
+  { key: "8", label: "Form", children: <FormPage /> },
+  { key: "9", label: "Feedback", children: <FeedbackPage /> },
+  { key: "10", label: "Navigation", children: <NavigationPage /> },
 ];
 
 function App() {

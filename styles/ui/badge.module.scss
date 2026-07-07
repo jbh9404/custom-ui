@@ -1,0 +1,33 @@
+.badgeWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: var(--badge-color, #ff4d4f);
+  color: white;
+  border-radius: 10px;
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+  min-width: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  white-space: nowrap;
+  box-shadow: 0 0 0 2px white;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  padding: 0;
+  border-radius: 50%;
+}
