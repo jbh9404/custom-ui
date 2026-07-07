@@ -8,6 +8,7 @@ const ToastPage = () => {
 
   return (
     <div>
+      <h3 style={{ marginBottom: '16px', fontFamily: 'sans-serif', fontSize: '24px' }}>Toast</h3>
       <button
         onClick={() => {
           console.log("hello");

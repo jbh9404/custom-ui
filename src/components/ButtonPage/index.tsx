@@ -19,6 +19,7 @@ const sizeData = [
 const ButtonPage = () => {
   return (
     <div className={styles.buttonPage}>
+      <h3 style={{ marginBottom: '16px', fontFamily: 'sans-serif', width: '100%', fontSize: '24px' }}>Button</h3>
       <div>
         <div className={styles.title}>Types</div>
         {kindData.map((n, index) => (
